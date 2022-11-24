@@ -12,4 +12,4 @@ def attempt(ip):
         #a lot of things
         s = "" #placeholder
     if ("445" in ports):
-        os.system("smbclient -L ")
+        os.system("smbclient -L " + ip)
