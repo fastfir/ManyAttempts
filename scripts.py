@@ -6,10 +6,8 @@ def attempt(ip):
     host = nm.all_hosts()
     ports = nm[host]['tcp'].keys()
     if ("21" in ports):
-        os.system("ftp " + ip)
-        os.system("anonymous")
+        os.system("./ftp.sh")
     if ("80" in ports):
-        #a lot of things
-        s = "" #placeholder
+        os.system("./http.sh")
     if ("445" in ports):
-        os.system("smbclient -L " + ip)
+        os.system("./smb.sh")
